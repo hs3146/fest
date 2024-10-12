@@ -34,12 +34,18 @@ const decodeData = (encodedData: string) => {
   return Buffer.from(encodedData, 'base64').toString('utf-8')
 }
 
+type Light = {
+  id: number;
+  left: number;
+  top: number;
+};
+
 export default function EnhancedDiwaliWishSender() {
   const [sender, setSender] = useState('')
   const [receiver, setReceiver] = useState('')
   const [isSent, setIsSent] = useState(false)
   const [shareableLink, setShareableLink] = useState('')
-  const [movingLights, setMovingLights] = useState([])
+  const [movingLights, setMovingLights] = useState<Light[]>([])
   const [currentQuote, setCurrentQuote] = useState('')
   const [activeTab, setActiveTab] = useState('WhatsApp')
 
