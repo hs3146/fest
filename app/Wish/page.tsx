@@ -81,7 +81,7 @@ export default function WishPage() {
     }, 500)
 
     return () => clearInterval(interval)
-  }, [searchParams])
+  }, [searchParams, isValid])
 
   if (isLoading) {
     return (

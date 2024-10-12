@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Share2, Facebook, Instagram, Send, Twitter, Linkedin, Mail, Copy } from 'lucide-react'
+import {  Facebook, Instagram, Send, Twitter, Linkedin, Mail, Copy } from 'lucide-react'
 import confetti from 'canvas-confetti'
 
 const diwaliQuotes = [
@@ -148,7 +148,7 @@ export default function EnhancedDiwaliWishSender() {
               />
             </div>
             <div>
-              <label htmlFor="receiver" className="block text-sm font-medium text-gray-700">Receiver's Name</label>
+              <label htmlFor="receiver" className="block text-sm font-medium text-gray-700">{"Receiver's Name"}</label>
               <input
                 id="receiver"
                 type="text"
@@ -171,7 +171,7 @@ export default function EnhancedDiwaliWishSender() {
               Happy Diwali, {receiver}!
             </h2>
             <p className="text-lg">
-              {sender} wishes you a prosperous and joyous Diwali filled with light and happiness!
+              {sender} {"wishes you a prosperous and joyous Diwali filled with light and happiness!"}
             </p>
             <p className="italic text-orange-700">&quot;{currentQuote}&quot;</p>
             <input
