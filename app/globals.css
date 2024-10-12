@@ -3,25 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: 32 100% 95%;
+  --foreground: 20 50% 10%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 20 50% 10%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 50% 10%;
+  
+  --primary: 20 100% 50%;
+  --primary-foreground: 60 10% 98%;
+  
+  --secondary: 35 100% 50%;
+  --secondary-foreground: 60 10% 98%;
+  
+  --muted: 60 5% 90%;
+  --muted-foreground: 20 40% 20%;
+  
+  --accent: 12 100% 50%;
+  --accent-foreground: 60 10% 98%;
+  
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 60 10% 98%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --border: 20 30% 85%;
+  --input: 20 30% 85%;
+  --ring: 20 100% 50%;
+
+  --radius: 0.5rem;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
