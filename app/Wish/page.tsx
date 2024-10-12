@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import React, { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
@@ -27,11 +27,17 @@ const AdPlaceholder = ({ position }: { position: string }) => (
   </div>
 )
 
+type Light = {
+  id: number;
+  left: number;
+  top: number;
+};
+
 export default function WishPage() {
   const [sender, setSender] = useState('')
   const [receiver, setReceiver] = useState('')
   const [currentQuote, setCurrentQuote] = useState('')
-  const [movingLights, setMovingLights] = useState([])
+  const [movingLights, setMovingLights] = useState<Light[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [isValid, setIsValid] = useState(true)
   const searchParams = useSearchParams()
