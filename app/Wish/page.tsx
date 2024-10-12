@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import confetti from 'canvas-confetti'
@@ -33,7 +33,7 @@ type Light = {
   top: number;
 };
 
-export default function WishPage() {
+function WishPageContent() {
   const [sender, setSender] = useState('')
   const [receiver, setReceiver] = useState('')
   const [currentQuote, setCurrentQuote] = useState('')
@@ -181,4 +181,12 @@ export default function WishPage() {
       </div>
     </div>
   )
+}
+
+export default function WishPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <WishPageContent />
+    </Suspense>
+  );
 }
