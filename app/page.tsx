@@ -194,9 +194,9 @@ export default function NewYearWishSender() {
           <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">New Year 2025 Wish Sender</h1>
           
           {/* Direct Link ad placeholder */}
-          <div id="1234567890" className="w-full h-20 bg-gray-200 flex items-center justify-center text-gray-500 mb-4">
+          {/* <div id="1234567890" className="w-full h-20 bg-gray-200 flex items-center justify-center text-gray-500 mb-4">
             Direct Link Ad
-          </div>
+          </div> */}
 
           {!isSent ? (
             <form onSubmit={handleSubmit} className="space-y-4">

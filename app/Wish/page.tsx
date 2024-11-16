@@ -192,7 +192,7 @@ function WishPageContent() {
       <div className="w-full max-w-2xl p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl">
         <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">Happy New Year 2025!</h1>
         
-        <AdPlaceholder position="top mb-6" />
+        {/* <AdPlaceholder position="top mb-6" /> */}
         
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-semibold text-blue-600">
@@ -211,7 +211,7 @@ function WishPageContent() {
           </div>
         )}
         
-        <AdPlaceholder position="my-6" />
+        {/* <AdPlaceholder position="my-6" /> */}
         
         <div className="mt-6 text-center">
           <h3 className="text-xl font-semibold text-blue-600 mb-2">New Year Quote of the Day</h3>
@@ -224,10 +224,10 @@ function WishPageContent() {
           </Link>
         </div>
         
-        <AdPlaceholder position="mt-6" />
+        {/* <AdPlaceholder position="mt-6" /> */}
       </div>
       
-      <div className="fixed top-4 left-4 right-4 flex justify-between pointer-events-none">
+      {/* <div className="fixed top-4 left-4 right-4 flex justify-between pointer-events-none">
         <AdPlaceholder position="left" />
         <AdPlaceholder position="right" />
       </div>
@@ -235,7 +235,7 @@ function WishPageContent() {
       <div className="fixed bottom-4 left-4 right-4 flex justify-between pointer-events-none">
         <AdPlaceholder position="left" />
         <AdPlaceholder position="right" />
-      </div>
+      </div> */}
       
       {fireworks.map((firework) => (
         <div
