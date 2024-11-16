@@ -6,6 +6,7 @@ import React, { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import confetti from 'canvas-confetti'
+import Script from 'next/script';
 
 const newYearQuotes = [
   "May the New Year bring you happiness, peace, and prosperity. Wishing you a joyous 2025!",
@@ -280,7 +281,23 @@ function WishPageContent() {
 
 export default function WishPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+
+
+    <Suspense fallback={<div className='flex items-center
+     justify-center h-full w-full'>Loading...</div>}>
+            <Script data-cfasync="false"
+    type="text/javascript"  id="propeller-script" onError={()=>{
+        console.log("error")
+    }} onLoad={()=>{"loaded successfully"}}
+
+    src="https://alwingulla.com/88/tag.min.js"
+       data-zone="114175"
+        async 
+    strategy="afterInteractive" dangerouslySetInnerHTML={{
+      __html: `
+      <script src="https://alwingulla.com/88/tag.min.js" data-zone="114175" async data-cfasync="false"></script>
+  
+      `}}/>
       <WishPageContent />
     </Suspense>
   );
