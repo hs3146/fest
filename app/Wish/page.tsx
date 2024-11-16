@@ -176,7 +176,7 @@ function WishPageContent() {
 
   if (!isValid) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center p-4">
+      <div className=" my-16 lg:mt-0 min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center p-4">
         <div className="w-full max-w-md p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl text-center">
           <h1 className="text-2xl font-bold text-blue-600 mb-4">Invalid Wish Link</h1>
           <p className="mb-4">Sorry, this New Year wish link appears to be invalid or has expired.</p>
@@ -189,7 +189,7 @@ function WishPageContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center p-4">
+    <div className=" my-16 lg:mt-0 min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center p-4">
       <div className="w-full max-w-2xl p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl">
         <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">Happy New Year 2025!</h1>
         

@@ -189,7 +189,7 @@ export default function NewYearWishSender() {
         src="//ads.propellerads.com/adScript.php?zoneId=1234567&publisherId=123456"
         strategy="lazyOnload"
       /> */}
-      <div className="min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center my-16 lg:mt-0 justify-center p-4">
         <div className="w-full max-w-2xl p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl">
           <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">New Year 2025 Wish Sender</h1>
           
