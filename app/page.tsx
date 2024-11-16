@@ -171,10 +171,24 @@ export default function NewYearWishSender() {
 
   return (
     <>
-      <Script
+    
+    <Script data-cfasync="false"
+    type="text/javascript"  id="propeller-script" onError={()=>{
+        console.log("error")
+    }} onLoad={()=>{"loaded successfully"}}
+
+    src="https://alwingulla.com/88/tag.min.js"
+       data-zone="114175"
+        async 
+    strategy="afterInteractive" dangerouslySetInnerHTML={{
+      __html: `
+      <script src="https://alwingulla.com/88/tag.min.js" data-zone="114175" async data-cfasync="false"></script>
+  
+      `}}/>
+      {/* <Script
         src="//ads.propellerads.com/adScript.php?zoneId=1234567&publisherId=123456"
         strategy="lazyOnload"
-      />
+      /> */}
       <div className="min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center p-4">
         <div className="w-full max-w-2xl p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl">
           <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">New Year 2025 Wish Sender</h1>
@@ -273,7 +287,7 @@ export default function NewYearWishSender() {
           {/* On-click Popunder ad button */}
           <div id="0987654321" className="w-full mt-4">
             <button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-              Click for a surprise! (Ad)
+              Click for a surprise!
             </button>
           </div>
         </div>
